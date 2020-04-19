@@ -1,0 +1,7 @@
+
+.ipynb_checkpoints/ML Pipeline Preparation-checkpoint.ipynb
+  
+.ipynb_checkpoints
+**/*.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.DS_Store
