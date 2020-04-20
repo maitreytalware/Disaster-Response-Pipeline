@@ -76,8 +76,12 @@ We are providing much of the flask web app for you, but feel free to add extra f
 - Modify file paths for database and model as needed
 - Add data visualizations using Plotly in the web app. One example is provided for you
 
-
+#### Before query
 <img src='Images/webapp.png'></img>
+<br></br>
+
+#### After query
+<img src='Images/result.png'></img>
 <br></br>
 
 #### Visualisation 1 : 
@@ -104,7 +108,7 @@ Showing proportion of Message by Category
 3. Go to http://0.0.0.0:3001/
 
 ## 5. Conclusion
-We have succesfully implemented a flash web app that classifies disaster messages.
+We have succesfully implemented a flask web app that classifies disaster messages.
 
 ## 6. Reference
 
