@@ -1,5 +1,23 @@
 # Disaster Response Pipeline
- 
+### Table of contents
+
+<div class="alert alert-block alert-info" style="margin-top: 20px">
+    <ol>
+        <li><a href="#ref1">Introduction </a></li>
+        <li><a href="#ref1">Code Structure</a></li>
+        <li><a href="#ref1">Project Components</a></li>
+                <ul>
+         <li><a href="#ref3">Layout</a></li>
+        <li><a href="#ref4">ETL Pipeline</a></li>
+        <li><a href="#ref4">ML Pipeline</a></li>
+        <li><a href="#ref4">Flask Web App</a></li>
+        </ul>
+        <li><a href="#ref2">Running the web app</a></li>
+        <li><a href="#ref9">Conclusion section</a></li>
+        <li><a href="#ref9">References</a></li>
+    </ol>
+</div>
+
 ## 1. Introduction
 In this project, we will apply our skills to analyze disaster data from **Figure Eight** to build a model for an API that classifies disaster messages.
 
@@ -7,7 +25,29 @@ We have a data set containing real messages that were sent during disaster event
 
 Our project will include a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data.
 
-## 2. Project Components
+## 2. Code Structure
+```
+.
+├── app
+│   ├── run.py------------------------# FLASK FILE USED TO RUN THE APP
+│   └── templates
+│       ├── go.html-------------------# CLASSIFICATION RESULT PAGE OF WEB APP
+│       └── master.html---------------# MAIN PAGE OF THE WEB APP
+├── data
+│   ├── DisasterResponse.db-----------# CLEANED DATABASE
+│   ├── disaster_categories.csv-------# DATA TO PROCESS
+│   ├── disaster_messages.csv---------# DATA TO PROCESS
+│   └── process_data.py---------------# PERFORMS ETL PROCESS
+├── Images-------------------------------# PLOTS FOR USE IN README AND THE WEB APP
+├── models
+│   └── train_classifier.py-----------# PERFORMS CLASSIFICATION TASK
+├── ETL Pipeline Preparation.ipynb-----# PREPARING ETL PROCESS
+├── ML Pipeline Preparation.ipynb------# PREPARING ML PROCESS
+├── Readme.md-------------------------# README FILE
+
+```
+
+## 3. Project Components
 
 #### 1. Layout 
 - ETL Pipeline Preparation 
@@ -49,3 +89,25 @@ Showing distribution of Message Genres
 Showing proportion of Message by Category
 <img src='Images/vis2.png'></img>
 <br></br>
+
+## 4. Running the web app
+1. Run the following commands in the project's root directory to set up your database and model.
+
+    - To run ETL pipeline that cleans data and stores in database
+        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
+    - To run ML pipeline that trains classifier and saves
+        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+
+2. Run the following command in the app's directory to run your web app.
+    `python run.py`
+
+3. Go to http://0.0.0.0:3001/
+
+## 5. Conclusion
+We have succesfully implemented a flash web app that classifies disaster messages.
+
+## 6. Reference
+
+- Udacity
+- https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html
+- https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html 
