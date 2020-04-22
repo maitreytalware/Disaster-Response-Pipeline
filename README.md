@@ -3,6 +3,7 @@
 
 <div class="alert alert-block alert-info" style="margin-top: 20px">
     <ol>
+        <li><a href="#ref1">Problem Statement </a></li>
         <li><a href="#ref1">Introduction </a></li>
         <li><a href="#ref1">Code Structure</a></li>
         <li><a href="#ref1">Project Components</a></li>
@@ -18,7 +19,12 @@
     </ol>
 </div>
 
-## 1. Introduction
+## 1. Problem Statement
+So following a disaster, typically you will get millions and millions of communications either direct or via social media right at the timewhen disaster response organizations have the least capacity to filter and then pull out the messages which are the most important.
+
+When you look at the data,you'll see that these are the categories that we have pulled out for each of these datasets and this is to allow you to investigate the different trends that you might be able to find and to build supervised Machine Learning models.
+
+## 2. Introduction
 In this project, we will apply our skills to analyze disaster data from **Figure Eight** to build a model for an API that classifies disaster messages.
 
 We have a data set containing real messages that were sent during disaster events. You will be creating a machine learning pipeline to categorize these events so that you can send the messages to an appropriate disaster relief agency.
